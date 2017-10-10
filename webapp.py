@@ -8,12 +8,12 @@ def render_main():
 
 @app.route("/response")
 def render_response():
-    color = request.args['mph']
+    mph = request.args['mph']
     #The request object stores information about the request sent to the server.
     #args is a MultiDict (like a dictionary but can have multiple values for the same key)
     #The information in args is visible in the url for the page being requested (ex. .../response?color=blue)
-    if color == 'pink':
-        response = "That's my favorite color, too!"
+    if mph == '1':
+        response = "test"
     else:
         response = "My favorite color is pink."
     return render_template('response.html', response = response)
