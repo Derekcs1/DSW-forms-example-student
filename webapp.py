@@ -15,7 +15,7 @@ def render_response():
     if mph == '1':
         response = "test"
     else:
-        response = "My favorite color is pink."
+        response = "test"
     return render_template('response.html', response = response)
     
 if __name__=="__main__":
