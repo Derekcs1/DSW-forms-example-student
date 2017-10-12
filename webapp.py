@@ -12,8 +12,8 @@ def render_response():
     #The request object stores information about the request sent to the server.
     #args is a MultiDict (like a dictionary but can have multiple values for the same key)
     #The information in args is visible in the url for the page being requested (ex. .../response?color=blue)
-    if request.args == request.args
-        response = "request.args * 1.609334"
+    if mph == '1':
+        response = "test"
     else:
         response = "Test1"
     return render_template('response.html', response = response)
