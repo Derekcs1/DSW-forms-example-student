@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Answer</title>
+  </head>
+  <body>
+    <h1>Your value is: </h1>
+    <p>{{ response }}</p>
+    
+  </body>
+</html>
