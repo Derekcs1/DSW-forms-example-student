@@ -30,7 +30,7 @@ if __name__=="__home__":
 def render_responseS():
     mph = float(request.args['sandwich'])
     
-    response = sandwhich * 5
+    response = sandwich / 5
     return render_template('responseS.html', response = response)
     
 if __name__=="__home__":
