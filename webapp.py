@@ -3,20 +3,20 @@ from flask import Flask, url_for, render_template, request
 app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  Otherwise, it is the name of the file (ex. webapp)
 
 @app.route("/")
-def render_main():
+def render_home():
     return render_template('home.html')
 
 @app.route("/response")
 def render_response():
-    mph = float(request.args['mph'])
+    mph = request.args['mph']
     #The request object stores information about the request sent to the server.
     #args is a MultiDict (like a dictionary but can have multiple values for the same key)
     #The information in args is visible in the url for the page being requested (ex. .../response?color=blue)
     if mph == '1':
         response = "test"
     else:
-        response = "test"
+        response = "Test1"
     return render_template('response.html', response = response)
     
-if __name__=="__main__":
+if __name__=="__home__":
     app.run(debug=False, port=54321)
