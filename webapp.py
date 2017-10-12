@@ -6,15 +6,34 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 def render_home():
     return render_template('home.html')
 
-@app.route("/response")
+@app.route("/responseM")
 def render_response():
     mph = float(request.args['mph'])
-    #The request object stores information about the request sent to the server.
-    #args is a MultiDict (like a dictionary but can have multiple values for the same key)
-    #The information in args is visible in the url for the page being requested (ex. .../response?color=blue)
     
     response = mph * 1.6
-    return render_template('response.html', response = response)
+    return render_template('responseM.html', response = response)
     
 if __name__=="__home__":
     app.run(debug=False, port=54321)
+
+@app.route("/responseV")
+def render_response():
+    mph = float(request.args['value'])
+    
+    response = value * .84
+    return render_template('responseV.html', response = response)
+    
+if __name__=="__home__":
+    app.run(debug=False, port=54321)
+ 
+@app.route("/responseS")
+def render_response():
+    mph = float(request.args['sandwich'])
+    
+    response = sandwhich * 5
+    return render_template('responseS.html', response = response)
+    
+if __name__=="__home__":
+    app.run(debug=False, port=54321)
+
+
