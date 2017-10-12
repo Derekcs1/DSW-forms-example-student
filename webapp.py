@@ -14,8 +14,6 @@ def render_response():
     #The information in args is visible in the url for the page being requested (ex. .../response?color=blue)
     
     response = mph * 1.6
-    else:
-        response = "Test1"
     return render_template('response.html', response = response)
     
 if __name__=="__home__":
