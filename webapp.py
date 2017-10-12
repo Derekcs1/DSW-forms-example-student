@@ -18,7 +18,7 @@ if __name__=="__home__":
 
 @app.route("/responseV")
 def render_responseV():
-    mph = float(request.args['value'])
+    value = float(request.args['value'])
     
     response = value * .84
     return render_template('responseV.html', response = response)
@@ -28,7 +28,7 @@ if __name__=="__home__":
  
 @app.route("/responseS")
 def render_responseS():
-    mph = float(request.args['sandwich'])
+    sandwich = float(request.args['sandwich'])
     
     response = sandwich / 5
     return render_template('responseS.html', response = response)
