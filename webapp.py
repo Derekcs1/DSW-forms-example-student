@@ -8,12 +8,12 @@ def render_home():
 
 @app.route("/response")
 def render_response():
-    mph = request.args['mph']
+    mph = float(request.args['mph'])
     #The request object stores information about the request sent to the server.
     #args is a MultiDict (like a dictionary but can have multiple values for the same key)
     #The information in args is visible in the url for the page being requested (ex. .../response?color=blue)
-    if mph == '1':
-        response = "test"
+    
+    response = mph * 1.6
     else:
         response = "Test1"
     return render_template('response.html', response = response)
