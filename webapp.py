@@ -7,7 +7,7 @@ def render_home():
     return render_template('home.html')
 
 @app.route("/responseM")
-def render_response():
+def render_responseM():
     mph = float(request.args['mph'])
     
     response = mph * 1.6
@@ -17,7 +17,7 @@ if __name__=="__home__":
     app.run(debug=False, port=54321)
 
 @app.route("/responseV")
-def render_response():
+def render_responseV():
     mph = float(request.args['value'])
     
     response = value * .84
@@ -27,7 +27,7 @@ if __name__=="__home__":
     app.run(debug=False, port=54321)
  
 @app.route("/responseS")
-def render_response():
+def render_responseS():
     mph = float(request.args['sandwich'])
     
     response = sandwhich * 5
